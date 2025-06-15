@@ -25,7 +25,7 @@ Upgrade:
 ```
 talosctl upgrade \
   --nodes <node IP> \
-  --image ghcr.io/talos-rpi5/installer:<version>
+  --image ghcr.io/ograff/installer:<version>
 ```
 
 ## Building

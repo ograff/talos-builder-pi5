@@ -55,7 +55,7 @@ jobs:
           ### What's available
           
           - 📦 **Raw disk image** (\`metal-arm64.raw.zst\`) for fresh installs
-          - ⚙️  **Installer image** (\`ghcr.io/talos-rpi5/installer:${{ github.ref_name }}\`) for upgrades
+          - ⚙️  **Installer image** (\`ghcr.io/ograff/installer:${{ github.ref_name }}\`) for upgrades
           
           ### Install
           
@@ -65,7 +65,7 @@ jobs:
           
           - **Upgrade existing node**
             \`\`\`bash
-            talosctl upgrade --nodes <NODE_IP> --image ghcr.io/talos-rpi5/installer:${{ github.ref_name }}
+            talosctl upgrade --nodes <NODE_IP> --image ghcr.io/ograff/installer:${{ github.ref_name }}
             \`\`\`
           
           EOF

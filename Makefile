@@ -3,11 +3,11 @@ TALOS_VERSION = v1.10.2
 SBCOVERLAY_VERSION = main
 
 REGISTRY ?= ghcr.io
-REGISTRY_USERNAME ?= talos-rpi5
+REGISTRY_USERNAME ?= ograff
 
 TAG ?= $(shell git describe --tags --exact-match)
 
-EXTENSIONS ?= ghcr.io/siderolabs/gvisor:20250505.0@sha256:d7503b59603f030b972ceb29e5e86979e6c889be1596e87642291fee48ce380c
+EXTENSIONS ?= ghcr.io/siderolabs/tailscale:1.82.5@sha256:84e12fb6e84f6f83a1711655f723fc60185c0adb38cb76d08416ea4a84e12cd9,ghcr.io/siderolabs/iscsi-tools:v0.2.0@sha256:f2d78a7f19d301f2bf88ec99d948ffc63778125ce3acb0146049b75ed7ecd18c,ghcr.io/siderolabs/util-linux-tools:2.40.4@sha256:f305315aec4fe0a355fb933c919a25550c67785acb193ee2842784317b5fa66b
 
 PKG_REPOSITORY = https://github.com/siderolabs/pkgs.git
 TALOS_REPOSITORY = https://github.com/siderolabs/talos.git
