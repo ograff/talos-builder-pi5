@@ -1,5 +1,5 @@
-PKG_VERSION = v1.11.0
-TALOS_VERSION = v1.11.5
+PKG_VERSION = v1.12.0
+TALOS_VERSION = v1.12.0
 SBCOVERLAY_VERSION = main
 
 REGISTRY ?= ghcr.io
@@ -7,7 +7,7 @@ REGISTRY_USERNAME ?= ograff
 
 TAG ?= $(shell git describe --tags --exact-match)
 
-EXTENSIONS ?= --system-extension-image=ghcr.io/siderolabs/tailscale:1.84.0@sha256:d3603fbf5037862174416831267059cf24a6b80e9ba12792da69d8f2d349cc98 --system-extension-image=ghcr.io/siderolabs/iscsi-tools:v0.2.0@sha256:ead7d05a63a7b9e1ce3fd8b4b88ab301ee3d236549972f9bb83583a799a01366 --system-extension-image=ghcr.io/siderolabs/util-linux-tools:2.40.4@sha256:bcaf485539d7d07ee2988d1f189df74c54f8ad818017bcebe88207618e54b86c
+EXTENSIONS ?= --system-extension-image=ghcr.io/siderolabs/tailscale:1.92.3@sha256:53e087294bb5adfb77af88457fc4e67d16219402220059bc0826b5c971dbd362 --system-extension-image=ghcr.io/siderolabs/iscsi-tools:v0.2.0@sha256:ace4f05eb2073aedfe08d5dadaf7f3c02e4a669ffe28b64cd4863ecf44e91bb9 --system-extension-image=ghcr.io/siderolabs/util-linux-tools:2.41.2@sha256:8433604b21ec56871b00f363008ab455b2ece264246be915a2d6f742ec90ffcb
 
 PKG_REPOSITORY = https://github.com/siderolabs/pkgs.git
 TALOS_REPOSITORY = https://github.com/siderolabs/talos.git
