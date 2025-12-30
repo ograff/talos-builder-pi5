@@ -1,17 +1,17 @@
-From b7ccb5069a944de89b2fc77400fbef962c56a9ba Mon Sep 17 00:00:00 2001
+From f5598aec5039bdd429af92c17725ae215337ac20 Mon Sep 17 00:00:00 2001
 From: Oliver Graff <oliver.e.graff@gmail.com>
 Date: Mon, 29 Dec 2025 22:50:41 -0800
 Subject: [PATCH] talos12
 
 ---
  hack/modules-arm64.txt | 358 ++++++++++++++++++-----------------------
- 1 file changed, 159 insertions(+), 199 deletions(-)
+ 1 file changed, 158 insertions(+), 200 deletions(-)
 
 diff --git a/hack/modules-arm64.txt b/hack/modules-arm64.txt
-index add054060..932da0828 100644
+index add054060..753d5180b 100644
 --- a/hack/modules-arm64.txt
 +++ b/hack/modules-arm64.txt
-@@ -1,236 +1,196 @@
+@@ -1,236 +1,194 @@
  kernel/arch/arm64/lib/xor-neon.ko
 +modules.builtin.bin
 +modules.builtin.modinfo
@@ -57,7 +57,7 @@ index add054060..932da0828 100644
  kernel/drivers/crypto/tegra/tegra-se.ko
 -kernel/drivers/gpu/drm/drm_buddy.ko
 -kernel/drivers/gpu/drm/drm_exec.ko
- kernel/drivers/gpu/drm/drm_gpuvm.ko
+-kernel/drivers/gpu/drm/drm_gpuvm.ko
  kernel/drivers/gpu/drm/drm_panel_backlight_quirks.ko
 -kernel/drivers/gpu/drm/drm_suballoc_helper.ko
 +kernel/drivers/acpi/video.ko
@@ -76,7 +76,6 @@ index add054060..932da0828 100644
 +kernel/drivers/gpu/drm/drm_vram_helper.ko
 +kernel/drivers/gpu/drm/hisilicon/hibmc/hibmc-drm.ko
 +kernel/drivers/gpu/drm/panfrost/panfrost.ko
-+kernel/drivers/gpu/drm/display/drm_dp_aux_bus.ko
 +kernel/drivers/gpu/drm/v3d/v3d.ko
 +kernel/drivers/gpu/drm/drm_exec.ko
  kernel/drivers/gpu/host1x/host1x.ko
