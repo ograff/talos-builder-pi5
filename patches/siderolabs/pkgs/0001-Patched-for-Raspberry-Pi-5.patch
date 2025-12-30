@@ -1240,7 +1240,7 @@ index 6408110..520594f 100644
        - |
          mkdir -p /src
 -        tar -xJf linux.tar.xz --strip-components=1 -C /src
-+        tar -xzf linux.tar.xz --strip-components=1 -C /src
++        tar -xzf linux.tar.gz --strip-components=1 -C /src
  
          cd /src
          make mrproper
