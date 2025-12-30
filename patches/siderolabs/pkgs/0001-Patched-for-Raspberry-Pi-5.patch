@@ -1,4 +1,4 @@
-From 0a63f2774a0d8f0dcc9a48f2088c9d1032fea6ab Mon Sep 17 00:00:00 2001
+From 5edc970fefb7432d3e8708e396a14c00bee4661e Mon Sep 17 00:00:00 2001
 From: Oliver Graff <oliver.e.graff@gmail.com>
 Date: Mon, 29 Dec 2025 22:32:04 -0800
 Subject: [PATCH] talos 12
@@ -6,8 +6,8 @@ Subject: [PATCH] talos 12
 ---
  Pkgfile                   |   8 +-
  kernel/build/config-arm64 | 387 ++++++++++++++++++++++++--------------
- kernel/prepare/pkg.yaml   |   5 +-
- 3 files changed, 248 insertions(+), 152 deletions(-)
+ kernel/prepare/pkg.yaml   |   6 +-
+ 3 files changed, 248 insertions(+), 153 deletions(-)
 
 diff --git a/Pkgfile b/Pkgfile
 index 8799e13..f8fe1e5 100644
@@ -1221,20 +1221,21 @@ index 65b3647..962315d 100644
  CONFIG_UBSAN_ENUM=y
  # CONFIG_UBSAN_ALIGNMENT is not set
 diff --git a/kernel/prepare/pkg.yaml b/kernel/prepare/pkg.yaml
-index 6408110..17df562 100644
+index 6408110..520594f 100644
 --- a/kernel/prepare/pkg.yaml
 +++ b/kernel/prepare/pkg.yaml
-@@ -6,7 +6,8 @@ dependencies:
+@@ -5,8 +5,8 @@ dependencies:
+   - stage: base
  steps:
    - sources:
-       - url: https://cdn.kernel.org/pub/linux/kernel/v{{ regexReplaceAll "(\\d+)(.\\d+)(\\.\\d+)?$" .linux_version "${1}" }}.x/linux-{{ .linux_version }}.tar.xz
+-      - url: https://cdn.kernel.org/pub/linux/kernel/v{{ regexReplaceAll "(\\d+)(.\\d+)(\\.\\d+)?$" .linux_version "${1}" }}.x/linux-{{ .linux_version }}.tar.xz
 -        destination: linux.tar.xz
-+        url: https://github.com/raspberrypi/linux/archive/0176325914cab516b73a5f1456fcd5f98c4764ab.tar.gz
++      - url: https://github.com/raspberrypi/linux/archive/0176325914cab516b73a5f1456fcd5f98c4764ab.tar.gz
 +        destination: linux.tar.gz
          sha256: "{{ .linux_sha256 }}"
          sha512: "{{ .linux_sha512 }}"
        - url: https://github.com/a13xp0p0v/kernel-hardening-checker/archive/{{ .kspp_ref }}.tar.gz
-@@ -18,7 +19,7 @@ steps:
+@@ -18,7 +18,7 @@ steps:
      prepare:
        - |
          mkdir -p /src
