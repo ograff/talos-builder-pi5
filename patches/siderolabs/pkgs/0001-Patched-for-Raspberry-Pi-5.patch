@@ -23,8 +23,8 @@ index 8799e13..f8fe1e5 100644
 -  linux_sha512: f16f28c395374099ccf21d9df654a31746ed3f09376f7f9eca172579787b7b493d3878cb0a44348c2846bba93f7950f04b0e45235152860e4789fdd2aa9711cb
 +  # renovate: datasource=git-tags extractVersion=^v(?<version>.*)$ depName=https://github.com/raspberrypi/linux.git
 +  linux_version: 0176325914cab516b73a5f1456fcd5f98c4764ab
-+  linux_sha256:
-+  linux_sha512:
++  linux_sha256: 4bf710ad166dc3503296d97ce91c9e24d1df32a0b99e1df31f87d769647a23d2
++  linux_sha512: 39610c6eb28490d091e4ab73f70b1b43fa8c7f9f63ef78331e244227d5e183ff0354f6a9ed0abbf6b30da96151b32991b129bd840d6c257d821029350732f631
  
    # renovate: datasource=git-tags extractVersion=^libaio-(?<version>.*)$ depName=https://pagure.io/libaio.git
    libaio_version: 0.3.113
